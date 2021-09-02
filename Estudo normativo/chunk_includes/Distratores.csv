@@ -1,0 +1,33 @@
+posicao,resposta,item,frase,vies,pergunta,respA,respB
+suj,um,2,A loja de frutas abriu naquele dia.,distratora,<b>Quantas lojas estavam abertas?</b>,Apenas uma,Mais de uma
+suj,um,3,A estrada havia sido interditada.,distratora,<b>Quantas estradas foram interditadas?</b>,Apenas uma,Mais de uma
+suj,um,6,Os pedreiros moveram alguns tijolos.,distratora,<b>Quantos pedreiros moveram tijolos?</b>,Apenas um,Mais de um
+suj,um,1,O técnico de informática consertou o computador.,distratora,<b>Quantos técnicos consertaram computadores?</b>,Apenas um,Mais de um
+suj,um,4,A cadelinha do vizinho latiu para o carteiro.,distratora,<b>Quantas cadelinhas latiram?</b>,Apenas uma,Mais de uma
+suj,um,14,O saxofonista da orquestra abriu o concerto.,distratora,<b>Quantos saxofonistas abriram o concerto?</b>,Apenas um,Mais de um
+suj,um,7,O garçom atendeu a mesa.,distratora,<b>Quantos garçons atenderam a mesa?</b>,Apenas um,Mais de um
+suj,um,8,O terapeuta avaliou a paciente.,distratora,<b>Quantas terapeutas avaliaram a paciente?</b>,Apenas um,Mais de um
+suj,+um,5,Os meninos comeram várias merendas.,distratora,<b>Quantos meninos comeram?</b>,Apenas um,Mais de um
+suj,+um,12,Os adolescentes saíram em protesto.,distratora,<b>Quantos adolescentes saíram em protesto?</b>,Apenas um,Mais de um
+suj,+um,9,Os garimpeiros poluíram os riachos.,distratora,<b>Quantos garimpeiros estavam poluindo?</b>,Apenas um,Mais de um
+suj,+um,11,Os feirantes venderam tomates frescos.,distratora,<b>Quantos feirantes venderam tomates?</b>,Apenas um,Mais de um
+obj,+um,10,A florista vendeu vários arranjos.,distratora,<b>Quantos arranjos foram vendidos?</b>,Apenas um,Mais de um
+obj,+um,13,O pintor de rua elaborou muitas pinturas.,distratora,<b>Quantas pinturas foram elaboradas?</b>,Apenas uma,Mais de uma
+obj,+um,15,Os mecânicos consertaram vários carros da oficina.,distratora,<b>Quantos carros foram consertados?</b>,Apenas um,Mais de um
+obj,+um,16,Os amigos não levaram suas bicicletas.,distratora,<b>Quantas bicicletas foram levadas?</b>,Apenas uma,Mais de uma
+suj,um,17,O barbeiro não pintou o cabelo da jovem.,distratora,<b>Quantos barbeiros não pintaram o cabelo?</b>,Apenas um,Mais de um
+suj,um,22,A caixa de leite caiu e estourou.,distratora,<b>Quantas caixas caíram?</b>,Apenas uma,Mais de uma
+suj,um,31,A filha não voltou para casa no prazo combinado.,distratora,<b>Quantas filhas não voltaram para casa?</b>,Apenas uma,Mais de uma
+suj,um,32,A viagem de fim de semana não foi como esperado.,distratora,<b>Quantas viagens foram feitas?</b>,Apenas uma,Mais de uma
+obj,um,18,O garotinho comeu o pedaço do bolo.,distratora,<b>Quantos pedaços foram comidos?</b>,Apenas um,Mais de um
+obj,um,21,O policial prendeu o político durante a eleição.,distratora,<b>Quantos políticos foram presos?</b>,Apenas um, Mais de um
+obj,um,26,O arqueólogo encontrou o artefato antigo.,distratora,<b>Quantos artefatos foram encontrados?</b>,Apenas um,Mais de um
+obj,um,28,O intelectual escreveu a biografia proibida.,distratora,<b>Quantas biografias o intelectual escreveu?</b>,Apenas uma,Mais de uma
+suj,+um,19,Os coelhinhos saltaram pelo gramado.,distratora,<b>Quantos coelhinhos saltaram?</b>,Apenas um,Mais de um
+suj,+um,23,As nuvens de chuva cobriram a praia.,distratora,<b>Quantas nuvens havia?</b>,Apenas uma,Mais de uma
+suj,+um,24,Os ciclistas de montanha se perderam na trilha.,distratora,<b>Quantos ciclistas se perderam?</b>,Apenas um,Mais de um
+suj,+um,25,Os taxistas fizeram várias passeatas.,distratora,<b>Quantos taxistas fizeram passeatas?</b>,Apenas um,Mais de um
+suj,+um,27,Os meninos passaram muitas dificuldades.,distratora,<b>Quantos meninos passaram dificuldades?</b>,Apenas um,Mais de um
+suj,+um,30,Os passarinhos saíram voando.,distratora,<b>Quantos passarinhos voaram?</b>,Apenas um,Mais de um
+suj,+um,20,Os escritores autografaram vários romances policiais.,distratora,<b>Quantos escritores estavam autografando?</b>,Apenas um,Mais de um
+suj,+um,29,As médicas do posto de saúde atenderam o paciente.,distratora,<b>Quantas médicas atenderam?</b>,Apenas uma,Mais de uma
