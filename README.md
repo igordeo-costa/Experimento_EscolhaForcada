@@ -10,3 +10,7 @@ A atividade foi programada em javascript usando a plataforma [PCIbex](https://ww
 - O script principal (``main.js``) encontra-se na pasta ``data_includes``.
 
 - Imagens, arquivos de áudio, formulários ``html`` e arquivos `` .csv`` com estímulos experimentais, distratores e treino encontram-se na pasta ``chunk_includes``.
+
+- Para baixar todo o conjunto de experimento clique em ``code`` e em seguida em ``Download ZIP``.
+
+**IMPORTANTE**: Este experimento ainda encontra-se em desenvolvimento, de modo que bugs e outros pequenos problemas podem estar presentes no código.
