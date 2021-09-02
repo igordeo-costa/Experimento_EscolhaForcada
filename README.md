@@ -1,1 +1,1 @@
-# Experimento_EscolhaFor-ada
+# Experimento_EscolhaForçada
