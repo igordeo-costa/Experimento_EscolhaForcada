@@ -1,16 +1,20 @@
-# Experimento_EscolhaForçada
-Este repositório tem por objetivo armazenar as informações sobre um experimento de **escolha forçada** ao qual foi acoplado uma tarefa de julgamento com **escala Likert**.
+# Experimento: Escolha Forçada com Escala Likert
+Este repositório tem por objetivo armazenar as informações sobre um experimento psicolinguístico de **escolha forçada** ao qual foi acoplado uma tarefa de julgamento com **Escala Likert**.
 
-O trabalho está sendo realizado como parte do meu doutorado em psicolínguista pela Pontifícia Universidade Católica do Rio de Janeiro -- LAPAL/PUC-Rio.
+O trabalho está sendo realizado como parte do meu doutorado em psicolínguista pela Pontifícia Universidade Católica do Rio de Janeiro - LAPAL/PUC-Rio.
 
 A atividade foi programada em javascript usando a plataforma [PCIbex](https://www.pcibex.net/).
 
 ## O que este repositório contém:
 
-- O script principal (``main.js``) encontra-se na pasta ``data_includes``.
+- Todos os arquivos pertinentes estão na pasta ``Estudo normativo``.
 
-- Imagens, arquivos de áudio, formulários ``html`` e arquivos `` .csv`` com estímulos experimentais, distratores e treino encontram-se na pasta ``chunk_includes``.
+- O *script* principal (``main.js``) encontra-se na subpasta ``data_includes``.
 
-- Para baixar todo o conjunto de experimento clique em ``code`` e em seguida em ``Download ZIP``.
+- Imagens, arquivos de áudio, formulários ``html`` e arquivos `` .csv`` com estímulos experimentais, distratores e treino encontram-se na subpasta ``chunk_includes``.
 
-**IMPORTANTE**: Este experimento ainda encontra-se em desenvolvimento, de modo que bugs e outros pequenos problemas podem estar presentes no código.
+- As demais subpastas (``ccs_includes`` e ``js_includes`` ) guardam códigos internos padronizados do PCIbex. Recomendamos não alterar, a menos que você saiba o que está fazendo.
+
+- Para baixar todo o conjunto de arquivos do experimento, clique em ``code`` e em seguida em ``Download ZIP``.
+
+**IMPORTANTE**: Este experimento ainda se encontra em desenvolvimento, de modo que *bugs* e outros pequenos problemas podem estar presentes no código.
