@@ -2,7 +2,7 @@ PennController.ResetPrefix(null) // Keep here
 
 Sequence("tcle", "form", "instru", "trein", "FimDoTreino", rshuffle("experiment", "distrat"), SendResults() , "fim")
 
-//--------------------------------- TCLE ---------------------------------
+//---------------------------------------------- TCLE --------------------------------------------
 
 newTrial("tcle",
     newHtml("meutcle", "tcle.html")
@@ -21,16 +21,19 @@ newTrial("tcle",
 )
 ,
 
-//--------------------------------- Formulário de dados pessoais ---------------------------------
+//-------------------------------- Formulário de dados pessoais ----------------------------------
 
 newTrial("form",
-    newText("<b>Por favor, preencha alguns dados pessoais: </b>")
+    newText("<b>Por favor, preencha alguns dados pessoais:</b>")
         .cssContainer({"font-size": "125%"})
         .print()
         .center()
     ,
     
+    /*
     // ------------- Nome ------------------------
+    // Normas éticas não recomendam recolher nome ou e-mail de participante
+    // Logo, esse trecho foi excluído do código
     newText("<br>Nome (ou iniciais):")
         .cssContainer({"font-size": "125%"})
         .print()
@@ -47,7 +50,7 @@ newTrial("form",
         .global()
         .set(getTextInput("nome"))
     ,
-    
+    */
     // ------------- Gênero ------------------------
     newText("Gênero:")
         .cssContainer({"font-size": "125%"})
@@ -124,7 +127,7 @@ newTrial("form",
         .wait(
             getDropDown("genero").test.selected()
                 .and(getDropDown("escolaridade").test.selected())
-                    //.and(getDropDown("nativo").test.selected())
+                    .and(getDropDown("nativo").test.selected())
                         .failure(
                             newText('erro_preench', "Todos os campos são obrigatórios.")
                                 .css("color", "red")
@@ -135,7 +138,8 @@ newTrial("form",
 )
 ,
 
-// --------------------------------- INSTRUÇÕES ---------------------------------
+//-------------------------------------------- INSTRUÇÕES ----------------------------------------
+
 newTrial("instru",
 
     newHtml("instrucoes", "Instrucoes.html")
@@ -250,7 +254,7 @@ Template("Treino.csv", trn =>
     .log("vies", trn.vies)
     .log("item", trn.item)
     .log("frase", trn.frase)
-    .log("nome", getVar("NOME"))
+    //.log("nome", getVar("NOME"))
     .log("genero", getVar("GENERO"))
     .log("escolaridade", getVar("ESCOLARIDADE"))
     .log("nativo", getVar("NATIVO"))
@@ -377,7 +381,7 @@ Template("Experimentais.csv", exp =>
     .log("vies", exp.vies)
     .log("item", exp.item)
     .log("frase", exp.frase)
-    .log("nome", getVar("NOME"))
+   //.log("nome", getVar("NOME"))
     .log("genero", getVar("GENERO"))
     .log("escolaridade", getVar("ESCOLARIDADE"))
     .log("nativo", getVar("NATIVO"))
@@ -481,35 +485,36 @@ Template("Distratores.csv", dist =>
     .log("vies", dist.vies)
     .log("item", dist.item)
     .log("frase", dist.frase)
-    .log("nome", getVar("NOME"))
+    //.log("nome", getVar("NOME"))
     .log("genero", getVar("GENERO"))
     .log("escolaridade", getVar("ESCOLARIDADE"))
     .log("nativo", getVar("NATIVO"))
 )
 
-/*
 ,
-// Tela final
+//-------------------------------------------- TELA FINAL ----------------------------------------
+
 newTrial("fim",
 
-    defaultText()
-        //.cssContainer({"font-size": "125%"})
+    newText("Acabamos! Obrigado pela colaboração!<br><br>")
+        .cssContainer({"font-size": "125%"})
         .print()
         .center()
-        
     ,
-    newText("Acabamos! Obrigado pela colaboração!")
-
+    newText("Se quiser saber mais sobre essa pesquisa, entre em contato pelo e-mail <a href='mailto:igordeo.costa@gmail.com' target='_blank'>igordeo.costa@gmail.com</a> ou visite <a href='https://igordeo-costa.github.io/' target='_blank'>o blog do pesquisaror</a>.<br><br>")
+        .cssContainer({"font-size": "125%"})
+        .print()
+        .center()
     ,
-    newText("Se quiser saber mais sobre essa pesquisa, entre em contato: igordeo.costa@gmail.com ou visite <a href='https://igordeo-costa.github.io/' target='_blank'>o blog do pesquisaror.</a>.")
-
-    ,
-    newText("Visite, também, o site do <a href='http://www.lapal.letras.puc-rio.br/' target='_blank'>Laboratório de Psicolinguística e Aquisição da Linguagem da PUC-Rio - LAPAL/PUC-Rio</a>.")
-
+    newText("Visite, também, o site do <a href='http://www.lapal.letras.puc-rio.br/' target='_blank'>LAPAL/PUC-Rio</a>.<br><br>")
+        .cssContainer({"font-size": "125%"})
+        .print()
+        .center()
     ,
     newButton("Sair do experimento")
+        .css("margin","1em")
+        .css("font-size", "20px")
         .print()
+        .center()
         .wait()
     )
-
-*/
