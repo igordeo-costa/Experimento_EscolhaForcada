@@ -18,3 +18,11 @@ A atividade foi programada em javascript usando a plataforma [PCIbex](https://ww
 - Para baixar todo o conjunto de arquivos do experimento, clique em ``code`` e em seguida em ``Download ZIP``.
 
 **IMPORTANTE**: Este experimento ainda se encontra em desenvolvimento, de modo que *bugs* e outros pequenos problemas podem estar presentes no código.
+
+## Nota sobre os estímulos experimentais:
+
+Os estímulos experimentais estão divididos em quatro listas (A, B, C, e D), nomeadas na coluna ``group`` da tabela ``Experimentais.csv``. Os estímulos de cada grupo (teste, coletivo, distributivo) foram aleatoriamente atribuídos a cada lista, que são apresentadas na tabela ``listas.csv``, de modo que cada uma delas contenha:
+
+- 8 estímulos teste;
+- 4 estímulos distributivos;
+- 4 estímulos coletivos.
