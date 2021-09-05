@@ -1,6 +1,8 @@
 PennController.ResetPrefix(null) // Keep here
 
-Sequence("tcle", "form", "instru", "trein", "FimDoTreino", rshuffle("experiment", "distrat"), SendResults() , "fim")
+var progressBarText = "Quanto ainda falta?"
+ 
+Sequence("tcle", "form", "instru","trein", "FimDoTreino", rshuffle("experiment", "distrat"), SendResults() , "fim")
 
 //---------------------------------------------- TCLE --------------------------------------------
 
@@ -52,6 +54,7 @@ newTrial("form",
     ,
     */
     // ------------- Gênero ------------------------
+    
     newText("Gênero:")
         .cssContainer({"font-size": "125%"})
         .print()
@@ -59,17 +62,10 @@ newTrial("form",
     ,
     newDropDown("genero", "selecionar")
         .css("font-size", "20px")
-        .center()
+        .css("margin","1em")
         .add("Feminino", "Masculino", "Outro", "Prefiro não informar")
         .center()
-        .css("margin","1em")
         .print()
-        .log()
-    ,
-    
-    newVar("GENERO")
-        .global()
-        .set(getDropDown("genero"))
     ,
     
     // ------------- Escolaridade ------------------------
@@ -91,12 +87,6 @@ newTrial("form",
         .center()
         .css("margin","1em")
         .print()
-        .log()
-    ,
-    
-    newVar("ESCOLARIDADE")
-        .global()
-        .set(getDropDown("escolaridade"))
     ,
     
     // ------------- Nativo ------------------------
@@ -112,14 +102,9 @@ newTrial("form",
         .center()
         .css("margin","1em")
         .print()
-        .log()
     ,
     
-    newVar("NATIVO")
-        .global()
-        .set(getDropDown("nativo"))
-    ,
-    
+    // ------------- Botão para formulário ------------------------
     newButton("CONTINUAR")
         .css("font-size", "20px")
         .center()
@@ -135,7 +120,25 @@ newTrial("form",
                                 .center()
                                 )
             )
+    ,
+    
+    // ------------- Variáveis a serem acessadas fora desse trial ------------------------
+     newVar("GENERO")
+        .global()
+        .set(getDropDown("genero"))
+    , 
+    
+    newVar("ESCOLARIDADE")
+        .global()
+        .set(getDropDown("escolaridade"))
+    ,
+    
+    newVar("NATIVO")
+        .global()
+        .set(getDropDown("nativo"))
+    
 )
+
 ,
 
 //-------------------------------------------- INSTRUÇÕES ----------------------------------------
@@ -180,6 +183,7 @@ Template("Treino.csv", trn =>
     newText("pergunta", trn.pergunta)
         .cssContainer({"font-size": "125%"})
         .print("center at 50%", "bottom at 25%")
+
     ,
     
     newTimer("tempo.esgotado", 4000)
@@ -254,6 +258,7 @@ Template("Treino.csv", trn =>
     .log("vies", trn.vies)
     .log("item", trn.item)
     .log("frase", trn.frase)
+    .log("lista", trn.item)
     //.log("nome", getVar("NOME"))
     .log("genero", getVar("GENERO"))
     .log("escolaridade", getVar("ESCOLARIDADE"))
@@ -381,7 +386,8 @@ Template("Experimentais.csv", exp =>
     .log("vies", exp.vies)
     .log("item", exp.item)
     .log("frase", exp.frase)
-   //.log("nome", getVar("NOME"))
+    .log("lista", exp.group)
+    //.log("nome", getVar("NOME"))
     .log("genero", getVar("GENERO"))
     .log("escolaridade", getVar("ESCOLARIDADE"))
     .log("nativo", getVar("NATIVO"))
@@ -485,6 +491,7 @@ Template("Distratores.csv", dist =>
     .log("vies", dist.vies)
     .log("item", dist.item)
     .log("frase", dist.frase)
+    .log("lista", dist.posicao)
     //.log("nome", getVar("NOME"))
     .log("genero", getVar("GENERO"))
     .log("escolaridade", getVar("ESCOLARIDADE"))
@@ -512,9 +519,5 @@ newTrial("fim",
         .center()
     ,
     newButton("Sair do experimento")
-        .css("margin","1em")
-        .css("font-size", "20px")
-        .print()
-        .center()
         .wait()
     )
