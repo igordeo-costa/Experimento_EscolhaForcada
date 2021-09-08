@@ -1,7 +1,8 @@
 PennController.ResetPrefix(null) // Keep here
+PennController.DebugOff()
 
-var progressBarText = "Quanto ainda falta..."
-
+var progressBarText = "Quanto ainda falta?"
+ 
 Sequence("tcle", "form", "instru","trein", "FimDoTreino", rshuffle("experiment", "distrat"), SendResults() , "fim")
 
 //---------------------------------------------- TCLE --------------------------------------------
@@ -10,7 +11,7 @@ newTrial("tcle",
     newHtml("meutcle", "tcle.html")
         .checkboxWarning("Você deve dar seu consentimento para participar da pesquisa.")
         .print()
-
+    
     ,
     newButton("CONTINUAR")
     .css("font-size", "20px")
@@ -26,12 +27,12 @@ newTrial("tcle",
 //-------------------------------- Formulário de dados pessoais ----------------------------------
 
 newTrial("form",
-    newText("<b>Por favor, preencha alguns dados pessoais:</b>")
+    newText("<b>Por favor, preencha alguns dados pessoais:</b><br><br>")
         .cssContainer({"font-size": "125%"})
         .print()
         .center()
     ,
-
+    
     /*
     // ------------- Nome ------------------------
     // Normas éticas não recomendam recolher nome ou e-mail de participante
@@ -47,19 +48,19 @@ newTrial("form",
         .print()
         .log()
     ,
-
+    
     newVar("NOME")
         .global()
         .set(getTextInput("nome"))
     ,
     */
     // ------------- Gênero ------------------------
-
     newText("Gênero:")
         .cssContainer({"font-size": "125%"})
         .print()
         .center()
     ,
+    
     newDropDown("genero", "selecionar")
         .css("font-size", "20px")
         .css("margin","1em")
@@ -67,7 +68,7 @@ newTrial("form",
         .center()
         .print()
     ,
-
+    
     // ------------- Escolaridade ------------------------
     newText("Escolaridade:")
         .cssContainer({"font-size": "125%"})
@@ -82,13 +83,13 @@ newTrial("form",
                 "Ensino Médio incompleto",
                 "Ensino Médio completo",
                 "Ensino Superior incompleto",
-                "Ensino Superior Completo",
+                "Ensino Superior completo",
                 "Pós-Graduação")
         .center()
         .css("margin","1em")
         .print()
     ,
-
+    
     // ------------- Nativo ------------------------
     newText("Você é falante nativo de português brasileiro?")
         .cssContainer({"font-size": "125%"})
@@ -103,7 +104,7 @@ newTrial("form",
         .css("margin","1em")
         .print()
     ,
-
+    
     // ------------- Botão para formulário ------------------------
     newButton("CONTINUAR")
         .css("font-size", "20px")
@@ -121,22 +122,22 @@ newTrial("form",
                                 )
             )
     ,
-
+    
     // ------------- Variáveis a serem acessadas fora desse trial ------------------------
      newVar("GENERO")
         .global()
         .set(getDropDown("genero"))
-    ,
-
+    , 
+    
     newVar("ESCOLARIDADE")
         .global()
         .set(getDropDown("escolaridade"))
     ,
-
+    
     newVar("NATIVO")
         .global()
         .set(getDropDown("nativo"))
-
+    
 )
 
 ,
@@ -147,14 +148,14 @@ newTrial("instru",
 
     newHtml("instrucoes", "Instrucoes.html")
         .print()
-
+    
     ,
     newButton("meubotao", "Sim!")
         .css("margin","1em")
         .css("font-size", "20px")
         .center()
         .print()
-        .wait()
+        .wait() 
 )
 ,
 
@@ -162,36 +163,36 @@ newTrial("instru",
 Template("Treino.csv", trn =>
     newTrial("trein",
 
-//----------------------------------------------------------------------------------------
+//----------------------------------------------------------------------------------------    
 // ETAPA 1 - Apresentação da sentença
-//----------------------------------------------------------------------------------------
+//----------------------------------------------------------------------------------------    
     newText("minhasentenca", trn.frase) // Insere a sentença a ser julgada.
         .cssContainer({"font-size": "125%"})
         .print("center at 50%", "bottom at 25%")
     ,
-
+    
     newTimer("tempo.apres", 4000)
         .start()
         .wait()
     ,
-
+    
     clear()
     ,
-//----------------------------------------------------------------------------------------
+//----------------------------------------------------------------------------------------    
 // ETAPA 2 - Pergunta de interpretação da sentença
-//----------------------------------------------------------------------------------------
+//----------------------------------------------------------------------------------------    
     newText("pergunta", trn.pergunta)
         .cssContainer({"font-size": "125%"})
         .print("center at 50%", "bottom at 25%")
 
     ,
-
+    
     newTimer("tempo.esgotado", 4000)
         .start()
     ,
-
+    
     newScale("resposta", trn.respA, trn.respB)
-        .cssContainer({"font-size": "125%"})
+        .cssContainer({"font-size": "125%", "line-height": "150%"})
         .radio()
         .labelsPosition("right")
         .vertical()
@@ -199,35 +200,35 @@ Template("Treino.csv", trn =>
         .callback(getTimer("tempo.esgotado").stop())
         .log()
     ,
-
+    
     getTimer("tempo.esgotado")
         .wait()
     ,
-
+    
     clear()
     ,
-
+    
     getScale("resposta")
         .test.selected()
         .success(
 //----------------------------------------------------------------------------------------
 // ETAPA 3 - Grau de confiança na resposta dada - Só ocorre se o tempo não tiver esgotado
-//----------------------------------------------------------------------------------------
+//----------------------------------------------------------------------------------------    
     newText("pergunta", "Você está seguro da sua resposta?")
         .cssContainer({"font-size": "125%"})
         .print("center at 50%", "bottom at 25%")
     ,
-
+    
     newScale("minhaescala", "1", "2", "3", "4","5")
         .cssContainer({"font-size": "125%"})
-        .before(newText("iniciodaescala", "Totalmente inseguro"))
-        .after(newText("finaldaescala", "Totalmente seguro"))
+        .before(newText("iniciodaescala", "Totalmente inseguro"))  
+        .after(newText("finaldaescala", "Totalmente seguro")) 
         .radio()
         .labelsPosition("top")
         .print("center at 50%", "bottom at 32%")
         .wait(getScale("minhaescala").test.selected())
         .log()
- //----------------------------------------------------------------------------------------
+ //---------------------------------------------------------------------------------------- 
  )
         .failure(
             newAudio("falha", "Error.mp3")
@@ -238,12 +239,12 @@ Template("Treino.csv", trn =>
                 .print("center at 50%", "bottom at 32%")
                 .center()
             ,
-
+            
             getAudio("falha")
                 .wait()
         )
     ,
-
+    
     clear()
     ,
 
@@ -275,7 +276,7 @@ newTrial("FimDoTreino",
 
     newText("O treino acabou!")
     ,
-
+    
     newText("<br>Vamos começar?<br><br>")
     ,
 
@@ -293,35 +294,35 @@ newTrial("FimDoTreino",
 Template("Experimentais.csv", exp =>
     newTrial("experiment",
 
-//----------------------------------------------------------------------------------------
+//----------------------------------------------------------------------------------------    
 // ETAPA 1 - Apresentação da sentença
-//----------------------------------------------------------------------------------------
+//----------------------------------------------------------------------------------------    
     newText("minhasentenca", exp.frase) // Insere a sentença a ser julgada.
         .cssContainer({"font-size": "125%"})
         .print("center at 50%", "bottom at 25%")
     ,
-
+    
     newTimer("tempo.apres", 4000)
         .start()
         .wait()
     ,
-
+    
     clear()
     ,
-//----------------------------------------------------------------------------------------
+//----------------------------------------------------------------------------------------    
 // ETAPA 2 - Pergunta de interpretação da sentença
-//----------------------------------------------------------------------------------------
+//----------------------------------------------------------------------------------------    
     newText("pergunta", exp.pergunta)
         .cssContainer({"font-size": "125%"})
         .print("center at 50%", "bottom at 25%")
     ,
-
+    
     newTimer("tempo.esgotado", 4000)
         .start()
     ,
-
+    
     newScale("resposta", exp.respA, exp.respB)
-        .cssContainer({"font-size": "125%"})
+        .cssContainer({"font-size": "125%", "line-height": "150%"})
         .radio()
         .labelsPosition("right")
         .vertical()
@@ -329,34 +330,34 @@ Template("Experimentais.csv", exp =>
         .callback(getTimer("tempo.esgotado").stop())
         .log()
     ,
-
+    
     getTimer("tempo.esgotado")
         .wait()
     ,
-
+    
     clear()
     ,
-
+    
     getScale("resposta")
         .test.selected()
         .success(
 //----------------------------------------------------------------------------------------
 // ETAPA 3 - Grau de confiança na resposta dada - Só ocorre se o tempo não tiver esgotado
-//----------------------------------------------------------------------------------------
+//----------------------------------------------------------------------------------------    
     newText("pergunta", "Você está seguro da sua resposta?")
         .cssContainer({"font-size": "125%"})
         .print("center at 50%", "bottom at 25%")
     ,
-
+    
     newScale("minhaescala", "1", "2", "3", "4","5")
         .cssContainer({"font-size": "125%"})
-        .before(newText("iniciodaescala", "Totalmente inseguro"))
-        .after(newText("finaldaescala", "Totalmente seguro"))
+        .before(newText("iniciodaescala", "Totalmente inseguro"))  
+        .after(newText("finaldaescala", "Totalmente seguro")) 
         .radio()
         .labelsPosition("top")
         .print("center at 50%", "bottom at 32%")
         .wait(getScale("minhaescala").test.selected()).log()
- //----------------------------------------------------------------------------------------
+ //---------------------------------------------------------------------------------------- 
  )
         .failure(
             newAudio("falha", "Error.mp3")
@@ -371,7 +372,7 @@ Template("Experimentais.csv", exp =>
                 .wait()
         )
     ,
-
+    
     clear()
     ,
 
@@ -397,35 +398,35 @@ Template("Experimentais.csv", exp =>
 Template("Distratores.csv", dist =>
     newTrial("distrat",
 
-//----------------------------------------------------------------------------------------
+//----------------------------------------------------------------------------------------    
 // ETAPA 1 - Apresentação da sentença
-//----------------------------------------------------------------------------------------
+//----------------------------------------------------------------------------------------    
     newText("minhasentenca", dist.frase) // Insere a sentença a ser julgada.
         .cssContainer({"font-size": "125%"})
         .print("center at 50%", "bottom at 25%")
     ,
-
+    
     newTimer("tempo.apres", 4000)
         .start()
         .wait()
     ,
-
+    
     clear()
     ,
-//----------------------------------------------------------------------------------------
+//----------------------------------------------------------------------------------------    
 // ETAPA 2 - Pergunta de interpretação da sentença
-//----------------------------------------------------------------------------------------
+//----------------------------------------------------------------------------------------    
     newText("pergunta", dist.pergunta)
         .cssContainer({"font-size": "125%"})
         .print("center at 50%", "bottom at 25%")
     ,
-
+    
     newTimer("tempo.esgotado", 4000)
         .start()
     ,
-
+    
     newScale("resposta", dist.respA, dist.respB)
-        .cssContainer({"font-size": "125%"})
+        .cssContainer({"font-size": "125%", "line-height": "150%"})
         .radio()
         .labelsPosition("right")
         .vertical()
@@ -433,35 +434,35 @@ Template("Distratores.csv", dist =>
         .callback(getTimer("tempo.esgotado").stop())
         .log()
     ,
-
+    
     getTimer("tempo.esgotado")
         .wait()
     ,
-
+    
     clear()
     ,
-
+    
     getScale("resposta")
         .test.selected()
         .success(
 //----------------------------------------------------------------------------------------
 // ETAPA 3 - Grau de confiança na resposta dada - Só ocorre se o tempo não tiver esgotado
-//----------------------------------------------------------------------------------------
+//----------------------------------------------------------------------------------------    
     newText("pergunta", "Você está seguro da sua resposta?")
         .cssContainer({"font-size": "125%"})
         .print("center at 50%", "bottom at 25%")
     ,
-
+    
     newScale("minhaescala", "1", "2", "3", "4","5")
         .cssContainer({"font-size": "125%"})
-        .before(newText("iniciodaescala", "Totalmente inseguro"))
-        .after(newText("finaldaescala", "Totalmente seguro"))
+        .before(newText("iniciodaescala", "Totalmente inseguro"))  
+        .after(newText("finaldaescala", "Totalmente seguro")) 
         .radio()
         .labelsPosition("top")
         .print("center at 50%", "bottom at 32%")
         .wait(getScale("minhaescala").test.selected())
         .log()
- //----------------------------------------------------------------------------------------
+ //---------------------------------------------------------------------------------------- 
  )
         .failure(
             newAudio("falha", "Error.mp3")
@@ -476,7 +477,7 @@ Template("Distratores.csv", dist =>
                 .wait()
         )
     ,
-
+    
     clear()
     ,
 
