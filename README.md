@@ -15,9 +15,11 @@ A atividade foi programada em javascript usando a plataforma [PCIbex](https://ww
 
 - As demais subpastas (``ccs_includes`` e ``js_includes`` ) guardam códigos internos padronizados do PCIbex. Recomendamos não alterar, a menos que você saiba o que está fazendo.
 
+- A pasta ``Resultados`` contém um arquivo ``.R`` que faz uma limpeza inicial dos resultados e organiza os nomes das colunas de modo adequado; e um arquivo ``.css`` com os resultados de três participantes que testaram a tarefa.
+ 
 - Para baixar todo o conjunto de arquivos do experimento, clique em ``code`` e em seguida em ``Download ZIP``.
 
-**IMPORTANTE**: Este experimento ainda se encontra em desenvolvimento, de modo que *bugs* e outros pequenos problemas podem estar presentes no código.
+**IMPORTANTE**: Esta é a versão final do experimento, testada e estável, que parece se comportar de modo adequado. Qualquer *bug* e outros pequenos problemas podem ainda não terem sido percebidos, já que a tarefa ainda não foi aplicada para um grande número de participantes.
 
 ## Nota sobre os estímulos experimentais:
 
