@@ -38,3 +38,8 @@ Os estímulos de cada um desses três grupos foram aleatoriamente atribuídos a 
 
 #### Quanto aos sujeitos
 Cada sujeito será aleatoriamente submetido a uma das quatro listas (A, B, C e D), sendo que, para cada um, os itens experimentais e os distratores são aleatorizados pelo programa, buscando-se garantir, no entanto, que [itens experimentais não surjam em sequência](https://github.com/addrummond/ibex/blob/master/docs/manual.md#shuffle-sequences), sendo entremeados por itens distratores.
+
+#### Quanto às sentenças distratoras
+Em todas as sentenças experimentais, a pergunta de interpretação incidia sobre o objeto do verbo (*v.g.* As manisfestantes incendiaram *um ônibus*. Quantos *ônibus* foram incendiados?). A fim de garantir que o mesmo número de perguntas recairia sobre o sujeito e sobre o objeto, construímos as distratoras de tal modo a conterem: 24 perguntas sobre o sujeito (codificadas como ```suj``` na coluna ```posicao``` da tabela ```Distratores.csv```) e apenas 8 sobre o objeto (codificadas como ```obj```). Desse modo, como cada lista apresenta 16 experimentais, cada sujeito será submetido a 24 perguntas que incidem sobre o objeto e 24 que incidem sobre o sujeito.
+
+Quanto às respostas à pergunta de interpretação, metade das distratoras (8 sentenças) têm como respostas certas ou mais plausíveis "Apenas um" (```um``` na coluna ```resposta``` da tabela ```Distratores.csv```) e outras 8 têm como resposta certa "Mais de um" (codificadas como ```+um```).
