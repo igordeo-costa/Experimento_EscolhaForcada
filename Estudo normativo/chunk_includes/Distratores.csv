@@ -1,6 +1,6 @@
 posicao,resposta,item,frase,vies,pergunta,respA,respB
 suj,um,2,A loja de frutas abriu naquele dia.,distratora,<b>Quantas lojas estavam abertas?</b>,Apenas uma,Mais de uma
-suj,um,3,A estrada havia sido interditada.,distratora,<b>Quantas estradas foram interditadas?</b>,Apenas uma,Mais de uma
+suj,um,3,A estrada foi interditada.,distratora,<b>Quantas estradas foram interditadas?</b>,Apenas uma,Mais de uma
 suj,um,6,Os pedreiros moveram alguns tijolos.,distratora,<b>Quantos pedreiros moveram tijolos?</b>,Apenas um,Mais de um
 suj,um,1,O técnico de informática consertou o computador.,distratora,<b>Quantos técnicos consertaram computadores?</b>,Apenas um,Mais de um
 suj,um,4,A cadelinha do vizinho latiu para o carteiro.,distratora,<b>Quantas cadelinhas latiram?</b>,Apenas uma,Mais de uma
@@ -27,7 +27,7 @@ suj,+um,19,Os coelhinhos saltaram pelo gramado.,distratora,<b>Quantos coelhinhos
 suj,+um,23,As nuvens de chuva cobriram a praia.,distratora,<b>Quantas nuvens havia?</b>,Apenas uma,Mais de uma
 suj,+um,24,Os ciclistas de montanha se perderam na trilha.,distratora,<b>Quantos ciclistas se perderam?</b>,Apenas um,Mais de um
 suj,+um,25,Os taxistas fizeram várias passeatas.,distratora,<b>Quantos taxistas fizeram passeatas?</b>,Apenas um,Mais de um
-suj,+um,27,Os meninos passaram muitas dificuldades.,distratora,<b>Quantos meninos passaram dificuldades?</b>,Apenas um,Mais de um
+suj,+um,27,Os meninos passaram por muitas dificuldades.,distratora,<b>Quantos meninos passaram dificuldades?</b>,Apenas um,Mais de um
 suj,+um,30,Os passarinhos saíram voando.,distratora,<b>Quantos passarinhos voaram?</b>,Apenas um,Mais de um
 suj,+um,20,Os escritores autografaram vários romances policiais.,distratora,<b>Quantos escritores estavam autografando?</b>,Apenas um,Mais de um
 suj,+um,29,As médicas do posto de saúde atenderam o paciente.,distratora,<b>Quantas médicas atenderam?</b>,Apenas uma,Mais de uma
