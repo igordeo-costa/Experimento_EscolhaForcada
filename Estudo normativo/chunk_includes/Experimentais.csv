@@ -26,8 +26,8 @@ B,25,Os funcionários podaram uma árvore.,teste,<b>Quantas árvores foram podad
 B,38,Os hóspedes engoliram uma azeitona.,distributivo,<b>Quantas azeitonas foram engolidas?</b>,Apenas uma,Mais de uma
 B,39,As alunas mascaram um chiclete.,distributivo,<b>Quantos chicletes foram mascados?</b>,Apenas um,Mais de um
 B,41,As costureiras conseguiram um emprego.,distributivo,<b>Quantos empregos foram conseguidos?</b>,Apenas um,Mais de um
-B,42,As skatistas tomaram um tombo.,distributivo,<b>Quantos tombos foram tomados?</b>,Apenas um,Mais de um
-B,49,As colaboradoras ergueram um piano.,coletivo,<b>Quantos pianos foram erguidos?</b>,Apenas um,Mais de um
+B,42,As skatistas receberam uma medalha.,distributivo,<b>Quantas medalhas foram recebidas?</b>,Apenas uma,Mais de uma
+B,49,Os ajudantes ergueram um piano.,coletivo,<b>Quantos pianos foram erguidos?</b>,Apenas um,Mais de um
 B,58,Os construtores reformaram uma praça.,coletivo,<b>Quantas praças foram reformadas?</b>,Apenas uma,Mais de uma
 B,60,Os companheiros carregaram um caminhão.,coletivo,<b>Quantos caminhões foram carregados?</b>,Apenas um,Mais de um
 B,63,Os jardineiros capinaram um jardim.,coletivo,<b>Quantos jardins foram capinados?</b>,Apenas um,Mais de um
@@ -40,7 +40,7 @@ C,23,As editoras revisaram um livro.,teste,<b>Quantos livros foram revisados?</b
 C,27,Os vândalos derrubaram uma parede.,teste,<b>Quantas paredes foram derrubadas?</b>,Apenas uma,Mais de uma
 C,29,As cozinheiras prepararam um jantar.,teste,<b>Quantos jantares foram preparados?</b>,Apenas um,Mais de um
 C,33,Os meninos comeram uma uva.,distributivo,<b>Quantas uvas foram comidas?</b>,Apenas uma,Mais de uma
-C,35,Os pacientes se submeteram a uma cirurgia.,distributivo,<b>Quantas cirurgias foram realizadas?</b>,Apenas uma,Mais de uma
+C,35,Os pacientes agendaram uma endoscopia.,distributivo,<b>Quantas endoscopias foram agendadas?</b>,Apenas uma,Mais de uma
 C,44,Os doentes fizeram uma tomografia.,distributivo,<b>Quantas tomografias foram feitas?</b>,Apenas uma,Mais de uma
 C,48,As competidoras acertaram um alvo.,distributivo,<b>Quantos alvos foram acertados?</b>,Apenas um,Mais de um
 C,52,Os soldados destruíram uma cidade.,coletivo,<b>Quantas cidades foram destruídas?</b>,Apenas uma,Mais de uma
@@ -50,15 +50,15 @@ C,61,As bombeiras esvaziaram um tanque.,coletivo,<b>Quantos tanques foram esvazi
 D,1,As manifestantes incendiaram um ônibus.,teste,<b>Quantos ônibus foram incendiados?</b>,Apenas um,Mais de um
 D,2,Os escoteiros construíram uma jangada.,teste,<b>Quantas jangadas foram construídas?</b>,Apenas uma,Mais de uma
 D,4,As engenheiras consertaram um barco.,teste,<b>Quantos barcos foram consertados?</b>,Apenas um,Mais de um
-D,6,Os porteiros lavaram uma calçada.,teste,<b>Quantos calçadas foram lavadas?</b>,Apenas uma,Mais de uma
+D,6,Os porteiros lavaram uma calçada.,teste,<b>Quantas calçadas foram lavadas?</b>,Apenas uma,Mais de uma
 D,8,As crianças plantaram uma árvore.,teste,<b>Quantas árvores foram plantadas?</b>,Apenas uma,Mais de uma
-D,28,Os turistas visitaram uma cidade.,teste,<b>Quantoa cidades foram visitadas?</b>,Apenas uma,Mais de uma
+D,28,Os turistas visitaram uma cidade.,teste,<b>Quantas cidades foram visitadas?</b>,Apenas uma,Mais de uma
 D,31,Os lavradores incendiaram um terreno.,teste,<b>Quantos terrenos foram incendiados?</b>,Apenas um,Mais de um
 D,32,Os pintores restauraram um quadro.,teste,<b>Quantos quadros foram restaurados?</b>,Apenas um,Mais de um
-D,37,As ciclistas perderam um dente.,distributivo,<b>Quantos dentes foram perdidos?</b>,Apenas um,Mais de um
-D,43,As torcedoras mascaram um chiclete.,distributivo,<b>Quantos tornozelos foram torcidos?</b>,Apenas um,Mais de um
+D,37,Os idosos tomaram um comprimido.,distributivo,<b>Quantos comprimidos foram tomados?</b>,Apenas um,Mais de um
+D,43,As garotas mascaram um chiclete.,distributivo,<b>Quantos chicletes foram mascados?</b>,Apenas um,Mais de um
 D,45,As grávidas fizeram um ultrassom.,distributivo,<b>Quantos ultrassons foram feitos?</b>,Apenas um,Mais de um
-D,46,Os acidentados se submeteram a uma radiografia.,distributivo,<b>Quantas radiografias foram realizadas?</b>,Apenas uma,Mais de uma
+D,46,Os acidentados realizaram uma radiografia.,distributivo,<b>Quantas radiografias foram realizadas?</b>,Apenas uma,Mais de uma
 D,50,Os empregados cercaram um prédio.,coletivo,<b>Quantos prédios foram cercados?</b>,Apenas um,Mais de um
 D,51,As zeladoras varreram um auditório.,coletivo,<b>Quantos auditórios foram varridos?</b>,Apenas um,Mais de um
 D,53,Os prisioneiros cavaram um túnel.,coletivo,<b>Quantos túneis foram cavados?</b>,Apenas um,Mais de um
