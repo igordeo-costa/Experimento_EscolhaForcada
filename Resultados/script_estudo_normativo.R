@@ -40,11 +40,8 @@ require(forcats)
 require(RColorBrewer)
 require(gridExtra)
 
-# Diretório de trabalho
-setwd("/home/dados/Acadêmicos/Doutorado/EXPERIMENTOS_2021/EscolhaForcada/Resultados")
-
 # Carregamento dos dados
-dados <- read.pcibex("/home/dados/Acadêmicos/Doutorado/EXPERIMENTOS_2021/EscolhaForcada/Resultados/Backup_ResultadosFinal_122Part.csv")
+dados <- read.pcibex("https://raw.githubusercontent.com/igordeo-costa/Experimento_EscolhaForcada/main/Resultados/ResultadosPCIbex.csv")
 
 #-------------------------------------------------------------------------------
 # Filtrando apenas os dados das sentenças 'teste'
